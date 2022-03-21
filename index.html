@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Bookself Sylla</title>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+        <div class="logo_name">Bookshelf</div>
+        <i class='bx bx-book-reader' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+         <input type="text" id="cari-book" placeholder="Search Book...">
+         <span class="tooltip">Search</span>
+         <i class='bx bx-search' ></i>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User</span>
+       </a>
+       <span class="tooltip">User</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="assets/img/profile.jpeg" alt="profileImg">
+           <div class="name_status">
+             <div class="name">Sylla Ayu Kusumahati</div>
+             <div class="status">Mahasiswa</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="col-1">
+      <div class="container information ">
+        <h1 class="infone">Fill your bookshelf now</h1>
+        <p class="desk"> Lihat rak bukumu  </p>
+        <ul>
+          <li>
+            <p>Jumlah Buku</p>
+            <h4 id="jumlahBuku">15</h4>
+          </li>
+        </ul>
+      </div>
+      <div class="container add">
+           <div class="add-book" id="add-book">
+             <h4>Tambahkan</h4>
+          </div> 
+        </div>
+    </div>
+    <div class="col-2">
+      <div class="container welcome">
+        <h1>Hi, there! Ayo Bangun Perpustakaanmu Sendiri</h1>
+      </div>
+  
+      <div class="content-book">
+        <div class="unread" id="unread">
+          <h4>Belum Selesai Dibaca</h4>
+        </div>
+        
+         <div class="read" id="read">
+          <h4>Selesai Dibaca</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="modal">
+        <section class="container">
+            <h2>Masukkan Buku Baru</h2>
+            <form id="form">
+                <div class="input-group">
+                    <input type="text" id="inputBookTitle" placeholder="Judul Buku" class="input-form"
+                        maxlength="120" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" id="inputBookAuthor" placeholder="Author" class="input-form"
+                        maxlength="60" pattern="^[a-zA-Z0-9_ ]*$" required />
+                </div>
+                <div class="input-group">
+                    <input type="date" id="inputBookYear" 
+                        class="input-form" min="1900" max="2025" />
+                </div>
+                <div class="button-group">
+                    <button type="reset" class="close" id="close">Tutup</button>
+                    <button type="submit" id="save">Simpan</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+
+
+  <script src="./storage.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
